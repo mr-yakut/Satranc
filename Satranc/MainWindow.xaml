@@ -5,144 +5,234 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Satranc"
         mc:Ignorable="d"
-        Title="4X4 TAHTA" Height="416" Width="400" >
+        Height="816" Width="800" WindowStartupLocation="CenterScreen" 
+        WindowState="Normal"
+        Title="Sayı Sıralama Oyunu" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
     <Grid>
-        <Grid x:Name="Tahta" Height="400" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid x:Name="Tahta" d:IsHidden="True">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="200"/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
             </Grid.ColumnDefinitions>
 
-            <Rectangle Grid.Column="0" Grid.Row="0" Fill="#FF5C06F3" Stroke="Black" />
-            <Rectangle Grid.Column="1" Grid.Row="0" Fill="#FF06F7CB" Stroke="Black" />
-            <Rectangle Grid.Column="2" Grid.Row="0" Fill="#FF5C06F3" Stroke="Black" />
-            <Rectangle Grid.Column="3" Grid.Row="0" Fill="#FF06F7CB" Stroke="Black" />
+            <Rectangle Grid.Column="0" Grid.Row="0" />
+            <Rectangle Grid.Column="1" Grid.Row="0" />
+            <Rectangle Grid.Column="2" Grid.Row="0" />
+            <Rectangle Grid.Column="3" Grid.Row="0" />
 
-            <Rectangle Grid.Column="0" Grid.Row="1" Fill="#FF06F7CB" Stroke="Black" />
-            <Rectangle Grid.Column="1" Grid.Row="1" Fill="#FF5C06F3" Stroke="Black" />
-            <Rectangle Grid.Column="2" Grid.Row="1" Fill="#FF06F7CB" Stroke="Black" />
-            <Rectangle Grid.Column="3" Grid.Row="1" Fill="#FF5C06F3" Stroke="Black" />
+            <Rectangle Grid.Column="0" Grid.Row="1" />
+            <Rectangle Grid.Column="1" Grid.Row="1" />
+            <Rectangle Grid.Column="2" Grid.Row="1" />
+            <Rectangle Grid.Column="3" Grid.Row="1" />
 
-            <Rectangle Grid.Column="0" Grid.Row="2" Fill="#FF5C06F3" Stroke="Black" />
-            <Rectangle Grid.Column="1" Grid.Row="2" Fill="#FF06F7CB" Stroke="Black" />
-            <Rectangle Grid.Column="2" Grid.Row="2" Fill="#FF5C06F3" Stroke="Black" />
-            <Rectangle Grid.Column="3" Grid.Row="2" Fill="#FF06F7CB" Stroke="Black" />
+            <Rectangle Grid.Column="0" Grid.Row="2" />
+            <Rectangle Grid.Column="1" Grid.Row="2" />
+            <Rectangle Grid.Column="2" Grid.Row="2" />
+            <Rectangle Grid.Column="3" Grid.Row="2" />
 
-            <Rectangle Grid.Column="0" Grid.Row="3" Fill="#FF06F7CB" Stroke="Black" />
-            <Rectangle Grid.Column="1" Grid.Row="3" Fill="#FF5C06F3" Stroke="Black" />
-            <Rectangle Grid.Column="2" Grid.Row="3" Fill="#FF06F7CB" Stroke="Black" />
-            <Rectangle Grid.Column="3" Grid.Row="3" Fill="#FF5C06F3" Stroke="Black" />
+            <Rectangle Grid.Column="0" Grid.Row="3" />
+            <Rectangle Grid.Column="1" Grid.Row="3" />
+            <Rectangle Grid.Column="2" Grid.Row="3" />
+            <Rectangle Grid.Column="3" Grid.Row="3" />
         </Grid>
 
-        <Grid x:Name="TASLAR" Height="400" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Grid.Background>
-                <ImageBrush Stretch="Fill"/>
-            </Grid.Background>
+        <Grid ShowGridLines="False">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
-            </Grid.ColumnDefinitions>
-
-            <Button Content="" Grid.Column="0" Grid.Row="0">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
-            </Button>
-            <Button Content="" Grid.Column="1" Grid.Row="0">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
-            </Button>
-            <Button Content="" Grid.Column="2" Grid.Row="0">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
-            </Button>
-            <Button Content="" Grid.Column="3" Grid.Row="0">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
+            <Button
+                x:Name="btn1" Content="" Width="200" Height="200" 
+                    FontWeight="Bold" FontSize="20"
+                    Grid.Column="0" Grid.Row="0" Click="btn1_Click" 
+                    MouseRightButtonDown="btn1_MouseRightButtonClick" Background="Blue"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    AutomationProperties.IsOffscreenBehavior="Default" 
+                    AutomationProperties.IsRequiredForForm="True" 
+                    AutomationProperties.Name="1" ClickMode="Press">
             </Button>
 
-            <Button Content="" Grid.Column="0" Grid.Row="1">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
-            </Button>
-            <Button Content="" Grid.Column="1" Grid.Row="1">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
-            </Button>
-            <Button Content="" Grid.Column="2" Grid.Row="1">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
-            </Button>
-            <Button Content="" Grid.Column="3" Grid.Row="1">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
+            <Button
+                x:Name="btn2" Content="" Width="200" Height="200" 
+                    FontWeight="Bold" FontSize="20"
+                    Grid.Column="0" Grid.Row="1" Click="btn2_Click" 
+                    MouseRightButtonDown="btn2_MouseRightButtonClick" Background="Yellow"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    AutomationProperties.IsOffscreenBehavior="Default" 
+                    AutomationProperties.IsRequiredForForm="True" 
+                    AutomationProperties.Name="2" ClickMode="Press">
             </Button>
 
-            <Button Content="" Grid.Column="0" Grid.Row="2">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
-            </Button>
-            <Button Content="" Grid.Column="1" Grid.Row="2">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
-            </Button>
-            <Button Content="" Grid.Column="2" Grid.Row="2">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
-            </Button>
-            <Button Content="" Grid.Column="3" Grid.Row="2">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
+            <Button 
+                x:Name="btn3" Content="" Width="200" Height="200" 
+                    FontWeight="Bold" FontSize="20"
+                    Grid.Column="0" Grid.Row="2" Click="btn3_Click" 
+                    MouseRightButtonDown="btn3_MouseRightButtonClick" Background="Blue"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    AutomationProperties.IsOffscreenBehavior="Default" 
+                    AutomationProperties.IsRequiredForForm="True" 
+                    AutomationProperties.Name="3" ClickMode="Press">
             </Button>
 
-            <Button Content="" Grid.Column="0" Grid.Row="3">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
+            <Button 
+                x:Name="btn4" Content="" Width="200" Height="200" 
+                    FontWeight="Bold" FontSize="20"
+                    Grid.Column="0" Grid.Row="3" Click="btn4_Click" 
+                    MouseRightButtonDown="btn4_MouseRightButtonClick" Background="Yellow"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    AutomationProperties.IsOffscreenBehavior="Default" 
+                    AutomationProperties.IsRequiredForForm="True" 
+                    AutomationProperties.Name="4" ClickMode="Press">
             </Button>
-            <Button Content="" Grid.Column="1" Grid.Row="3">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
+
+            <Button 
+                x:Name="btn5" Content="" Width="200" Height="200" 
+                    FontWeight="Bold" FontSize="20"
+                    Grid.Column="1" Grid.Row="0" Click="btn5_Click" 
+                    MouseRightButtonDown="btn5_MouseRightButtonClick" Background="Yellow"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    AutomationProperties.IsOffscreenBehavior="Default" 
+                    AutomationProperties.IsRequiredForForm="True" 
+                    AutomationProperties.Name="5" ClickMode="Press">
             </Button>
-            <Button Content="" Grid.Column="2" Grid.Row="3">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
+
+            <Button 
+                x:Name="btn6" Content="" Width="200" Height="200" 
+                    FontWeight="Bold" FontSize="20"
+                    Grid.Column="1" Grid.Row="1" Click="btn6_Click" 
+                    MouseRightButtonDown="btn6_MouseRightButtonClick" Background="Blue"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    AutomationProperties.IsOffscreenBehavior="Default" 
+                    AutomationProperties.IsRequiredForForm="True" 
+                    AutomationProperties.Name="6" ClickMode="Press">
             </Button>
-            <Button Content="" Grid.Column="3" Grid.Row="3">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
+
+            <Button 
+                x:Name="btn7" Content="" Width="200" Height="200" 
+                    FontWeight="Bold" FontSize="20"
+                    Grid.Column="1" Grid.Row="2" Click="btn7_Click" 
+                    MouseRightButtonDown="btn7_MouseRightButtonClick" Background="Yellow"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    AutomationProperties.IsOffscreenBehavior="Default" 
+                    AutomationProperties.IsRequiredForForm="True" 
+                    AutomationProperties.Name="7" ClickMode="Press">
+            </Button>
+
+            <Button 
+                x:Name="btn8" Content="" Width="200" Height="200" 
+                    FontWeight="Bold" FontSize="20"
+                    Grid.Column="1" Grid.Row="3" Click="btn8_Click" 
+                    MouseRightButtonDown="btn8_MouseRightButtonClick" Background="Blue"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    AutomationProperties.IsOffscreenBehavior="Default" 
+                    AutomationProperties.IsRequiredForForm="True" 
+                    AutomationProperties.Name="8" ClickMode="Press">
+            </Button>
+
+            <Button 
+                x:Name="btn9" Content="" Width="200" Height="200" 
+                    FontWeight="Bold" FontSize="20"
+                    Grid.Column="2" Grid.Row="0" Click="btn9_Click" 
+                    MouseRightButtonDown="btn9_MouseRightButtonClick" Background="Blue"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    AutomationProperties.IsOffscreenBehavior="Default" 
+                    AutomationProperties.IsRequiredForForm="True" 
+                    AutomationProperties.Name="9" ClickMode="Press">
+            </Button>
+
+            <Button 
+                x:Name="btn10" Content="" Width="200" Height="200" 
+                    FontWeight="Bold" FontSize="20"
+                    Grid.Column="2" Grid.Row="1" Click="btn10_Click" 
+                    MouseRightButtonDown="btn10_MouseRightButtonClick" Background="Yellow"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    AutomationProperties.IsOffscreenBehavior="Default" 
+                    AutomationProperties.IsRequiredForForm="True" 
+                    AutomationProperties.Name="10" ClickMode="Press">
+            </Button>
+
+            <Button 
+                x:Name="btn11" Content="" Width="200" Height="200" 
+                    FontWeight="Bold" FontSize="20"
+                    Grid.Column="2" Grid.Row="2" Click="btn11_Click" 
+                    MouseRightButtonDown="btn11_MouseRightButtonClick" Background="Blue"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    AutomationProperties.IsOffscreenBehavior="Default" 
+                    AutomationProperties.IsRequiredForForm="True" 
+                    AutomationProperties.Name="11" ClickMode="Press">
+            </Button>
+
+            <Button 
+                x:Name="btn12" Content="" Width="200" Height="200" 
+                    FontWeight="Bold" FontSize="20"
+                    Grid.Column="2" Grid.Row="3" Click="btn12_Click" 
+                    MouseRightButtonDown="btn12_MouseRightButtonClick" Background="Yellow"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    AutomationProperties.IsOffscreenBehavior="Default" 
+                    AutomationProperties.IsRequiredForForm="True" 
+                    AutomationProperties.Name="12" ClickMode="Press">
+            </Button>
+
+            <Button 
+                x:Name="btn13" Content="" Width="200" Height="200" 
+                    FontWeight="Bold" FontSize="20"
+                    Grid.Column="3" Grid.Row="0" Click="btn13_Click" 
+                    MouseRightButtonDown="btn13_MouseRightButtonClick" Background="Yellow"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    AutomationProperties.IsOffscreenBehavior="Default" 
+                    AutomationProperties.IsRequiredForForm="True" 
+                    AutomationProperties.Name="13" ClickMode="Press">
+            </Button>
+
+            <Button 
+                x:Name="btn14" Content="" Width="200" Height="200" 
+                    FontWeight="Bold" FontSize="20"
+                    Grid.Column="3" Grid.Row="1" Click="btn14_Click" 
+                    MouseRightButtonDown="btn14_MouseRightButtonClick" Background="Blue"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    AutomationProperties.IsOffscreenBehavior="Default" 
+                    AutomationProperties.IsRequiredForForm="True" 
+                    AutomationProperties.Name="14" ClickMode="Press">
+            </Button>
+
+            <Button 
+                x:Name="btn15" Content="" Width="200" Height="200" 
+                    FontWeight="Bold" FontSize="20"
+                    Grid.Column="3" Grid.Row="2" Click="btn15_Click" 
+                    MouseRightButtonDown="btn15_MouseRightButtonClick" Background="Yellow"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    AutomationProperties.IsOffscreenBehavior="Default" 
+                    AutomationProperties.IsRequiredForForm="True" 
+                    AutomationProperties.Name="15" ClickMode="Press">
+            </Button>
+
+            <Button 
+                x:Name="btn16" Content="" Width="200" Height="200" 
+                    FontWeight="Bold" FontSize="20"
+                    Grid.Column="3" Grid.Row="3" Click="btn16_Click" 
+                    MouseRightButtonDown="btn16_MouseRightButtonClick" Background="Blue"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    AutomationProperties.IsOffscreenBehavior="Default" 
+                    AutomationProperties.IsRequiredForForm="True" 
+                    AutomationProperties.Name="16" ClickMode="Press">
             </Button>
         </Grid>
     </Grid>
